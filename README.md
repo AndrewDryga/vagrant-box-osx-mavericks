@@ -46,6 +46,16 @@ If you face error: ```Agreeing to the Xcode/iOS license requires admin privilege
 sudo xcodebuild -license accept
 ```
 
+How to enable the Develop mode
+--
+When OSX is trying to prompt graphically for password (i.e when using swift REPL), it will raise the error
+
+```error:process exited with status -1) (lost connection)```
+
+because there is no graphical output when using vagrant via ssh login, enable the develop mode can solve this situation, run the following command:
+
+```sudo /usr/sbin/DevToolsSecurity --enable```
+
 Known issues
 --
 * Do not turn 3D acceleration on, or your Box will start retuning aborted condition and would not start in headless mode
